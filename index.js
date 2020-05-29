@@ -19,13 +19,20 @@ function render() {
   let html = '';
 
   todos.forEach(todo => {
-
+    html += `<li id="${todo.id}">
+    <label><input type="checkbox" ${todo.completed ? 'checked' : '' }>${todo.content}</label>
+  </li>`
   });
 
   return html;
 }
 
 console.log(render());
+
+const $btn = document.querySelector('.btn');
+$btn.onclick = (e) => {
+  document.querySelector('.test').innerHTML = render();
+}
 /*
 <li id="3">
   <label><input type="checkbox">HTML</label>
