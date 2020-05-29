@@ -17,19 +17,26 @@ const todos = [{
 
 
 function render() {
-  let html = '';
+  const test = document.querySelector('.test')
+
 
   todos.forEach(todo => {
     html += `<li id="${todo.id}">\n  <label><input type="checkbox"${todo.completed ? ' checked' : ''}>${todo.content}</label>
   </li>`;
+
   });
 
-  return html;
+  // return test;
 }
+render()
+//console.log(render());
+
+
 
 console.log(render());
 
 document.querySelector('.test').innerHTML += render();
+
 
 /*
 <li id="3">
@@ -43,4 +50,3 @@ document.querySelector('.test').innerHTML += render();
 </li>
 */
 
-//아래와 같은 코드가 작성되게 view를 만들어서, index.html에 ul에 자식으로 출력하세요. 어떠한 방법을 사용해도 좋습니다.
