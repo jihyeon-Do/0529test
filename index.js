@@ -27,19 +27,5 @@ function render() {
   return html;
 }
 
-console.log(render());
-/*
-<li id="3">
-  <label><input type="checkbox">HTML</label>
-</li>
-<li id="2">
-  <label><input type="checkbox" checked>CSS</label>
-</li>
-<li id="1">
-  <label><input type="checkbox">Javascript</label>
-</li>
-*/
-
-//아래와 같은 코드가 작성되게 view를 만들어서, index.html에 ul에 자식으로 출력하세요. 어떠한 방법을 사용해도 좋습니다.
 const $todos = document.querySelector('.test');
 $todos.innerHTML = render();
