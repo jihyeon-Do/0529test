@@ -20,12 +20,15 @@ function render() {
 
   todos.forEach(({ id, content, completed }) => {
     test.innerHTML += `<li id=${id}><label><input type="checkbox"${completed ? ' checked' : ''}>${content}</label></li>`
+  let html = '';
+
   });
 
   // return test;
 }
 render()
 //console.log(render());
+
 
 /*
 <li id="3">
@@ -39,4 +42,3 @@ render()
 </li>
 */
 
-//아래와 같은 코드가 작성되게 view를 만들어서, index.html에 ul에 자식으로 출력하세요. 어떠한 방법을 사용해도 좋습니다.
