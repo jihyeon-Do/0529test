@@ -19,7 +19,9 @@ function render() {
   let html = '';
 
   todos.forEach(todo => {
-
+    html += `<li id="${todo.id}">
+  <label><input type="checkbox">${todo.content}</label>
+</li>\n`
   });
 
   return html;
@@ -39,3 +41,5 @@ console.log(render());
 */
 
 //아래와 같은 코드가 작성되게 view를 만들어서, index.html에 ul에 자식으로 출력하세요. 어떠한 방법을 사용해도 좋습니다.
+const $todos = document.querySelector('.test');
+$todos.innerHTML = render();
