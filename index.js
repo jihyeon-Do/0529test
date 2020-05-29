@@ -15,17 +15,27 @@ const todos = [{
   }
 ];
 
+const $test = document.querySelector('.test');
+const $btn = document.querySelector('button');
 function render() {
-  let html = '';
+  // let html = '';
 
   todos.forEach(todo => {
-
+    const li = document.createElement("li");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    li.id = todo.id;
+    label.textContent = todo.content;
+    input.setAttribute("type", "checkbox");
+    todo.completed ? input.checked = true : input.checked = false;
+    li.appendChild(label);
+    label.appendChild(input);
+    $test.appendChild(li);
   });
-
-  return html;
+  // return html;
 }
-
-console.log(render());
+// console.log(render());
+$btn.onclick = () => render();
 /*
 <li id="3">
   <label><input type="checkbox">HTML</label>
