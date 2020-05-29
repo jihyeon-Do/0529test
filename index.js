@@ -21,8 +21,10 @@ function render() {
 
 
   todos.forEach(todo => {
-    html += `<li id="${todo.id}">\n  <label><input type="checkbox"${todo.completed ? ' checked' : ''}>${todo.content}</label>
-  </li>`;
+
+    html += `<li id="${todo.id}">
+    <label><input type="checkbox" ${todo.completed ? 'checked' : '' }>${todo.content}</label>
+  </li>`
 
   });
 
@@ -35,8 +37,13 @@ render()
 
 console.log(render());
 
-document.querySelector('.test').innerHTML += render();
 
+const $btn = document.querySelector('.btn');
+$btn.onclick = (e) => {
+  document.querySelector('.test').innerHTML = render();
+}
+
+document.querySelector('.test').innerHTML += render();
 
 /*
 <li id="3">
